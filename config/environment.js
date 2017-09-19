@@ -1,7 +1,7 @@
 /* eslint-env node */
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'gridium-front-end',
     environment,
@@ -25,6 +25,15 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.contentSecurityPolicy = {
+      'default-src': '\'none\'',
+      'script-src': '\'self\' \'unsafe-inline\' \'unsafe-eval\'',
+      'font-src': '\'self\' https://fonts.gstatic.com/',
+      'connect-src': '\'self\'',
+      'img-src': '\'self\'',
+      'style-src': '\'self\' \'unsafe-inline\' \'unsafe-eval\' https://fonts.gstatic.com/ https://fonts.googleapis.com',
+      'media-src': '\'self\''
+    };
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;

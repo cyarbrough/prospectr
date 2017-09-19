@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Small description for gridium-front-end goes here",
   "license": "MIT",
-  "author": "",
+  "author": "C. Yarbrough <cryarbrough@gmail.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,31 +11,46 @@
   "repository": "",
   "scripts": {
     "build": "ember build",
+    "coverage": "cross-env COVERAGE=true ember test",
+    "install-app": "npm install",
     "start": "ember server",
-    "test": "ember test"
+    "test": "ember test",
+    "update-app": "rm -rf node_modules bower_components dist tmp && npm install"
   },
   "devDependencies": {
+    "babel-eslint": "^8.0.0",
     "broccoli-asset-rev": "^2.4.5",
+    "cross-env": "^5.0.5",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~2.15.0",
     "ember-cli-app-version": "^3.0.0",
+    "ember-cli-autoprefixer": "^0.8.1",
     "ember-cli-babel": "^6.3.0",
+    "ember-cli-chai": "^0.4.2",
+    "ember-cli-code-coverage": "^0.4.1",
+    "ember-cli-content-security-policy": "^1.0.0",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.0.0",
     "ember-cli-htmlbars": "^2.0.1",
-    "ember-cli-htmlbars-inline-precompile": "^1.0.0",
+    "ember-cli-htmlbars-inline-precompile": "0.4.4",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-qunit": "^4.0.0",
+    "ember-cli-mocha": "^0.14.4",
+    "ember-cli-sass": "^7.0.0",
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.0",
+    "ember-cli-stylelint": "^0.15.0",
     "ember-cli-uglify": "^1.2.0",
-    "ember-data": "~2.14.9",
+    "ember-cli-windows-addon": "^1.3.1",
+    "ember-data": "^2.14.11",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.15.0",
-    "ember-welcome-page": "^3.0.0",
-    "loader.js": "^4.2.3"
+    "loader.js": "^4.2.3",
+    "normalize.css": "^7.0.0",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-declaration-use-variable": "^1.6.0",
+    "stylelint-order": "^0.6.0"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
