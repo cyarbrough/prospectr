@@ -1,0 +1,127 @@
+{
+  "data": [{
+    "type": "prospect",
+    "id": "2",
+    "attributes": {
+      "name": "C. Yarbrough",
+      "headline": "Front-end Developer"
+    },
+    "relationships": {
+      "essentials": {
+        "data": { 
+          "type": "essentials", "id": "2" }
+      },
+      "methodology": {
+        "data": { 
+          "type": "methodology", "id": "2" }
+      },
+      "specifications": {
+        "data": { 
+          "type": "specification", "id": "2" }
+      },
+      "profile": {
+        "data": { 
+          "type": "profile", "id": "2" }
+      },
+      "equipment": {
+        "data": { 
+          "type": "equipment", "id": "2" }
+      },
+      "technologies": {
+        "data": { 
+          "type": "technologies", "id": "2" }
+      }
+    }
+  }],
+  "included": [{
+    "type": "essentials",
+    "id": "2",
+    "attributes": {
+      "locations": "Denver",
+      "employment": ["Permanent", "Project"],
+      "experience": ["Seasoned"],
+      "start-date": "2017-09-19",
+      "company-size": "Ten To Twenty",
+      "team-size": { "min": 2, "max": 6 }
+    }
+  },
+  {
+    "type": "methodology",
+    "id": "2",
+    "attributes": {
+      "code-reviews": true,
+      "prototyping": true,
+      "fail-fast": true,
+      "unit-tests": true,
+      "integration-tests": true,
+      "build-server": ["Travis", "Jenkins"],
+      "static-code-analysis": ["ESLint"],
+      "version-control": ["Git", "BitBucket"],
+      "issue-tracker": ["GitHub", "Jira"],
+      "stand-ups": true,
+      "quick-start": true,
+      "commit-on-day-one": true
+    }
+  },
+  {
+    "type": "specification",
+    "id": "2",
+    "attributes": {
+      "workload": "1.0",
+      "work-week": 40,
+      "schedule": "Flexible",
+      "remote": "Required",
+      "pto": "Unlimited"
+    }
+  },
+  {
+    "type": "profile",
+    "id": "2",
+    "attributes": {
+      "new-features": 50,
+      "client-support": 8,
+      "documentation": 15,
+      "maintenance": 25,
+      "meetings": 2
+    }
+  },
+  {
+    "type": "equipment",
+    "id": "2",
+    "attributes": {
+      "operating-system": ["MacOSX"],
+      "computer": "Laptop"
+    }
+  },
+  {
+    "type": "technology",
+    "id": "2",
+    "attributes": {
+      "skills": {
+        "css3": "Expert",
+        "html5": "Expert",
+        "javascript": "Good",
+        "node": "Good",
+        "rest": "Good",
+        "uiux": "Good",
+        "design": "Good",
+        "testing": {
+          "oneof": {
+            "junit": "Good",
+            "mocha": "Good",
+            "jasmine": "Good",
+            "selenium": "Good"
+          }
+        },
+        "framework": {
+          "oneof": {
+            "ember": "Expert",
+            "react": "Familiar",
+            "angular": "Familiar"
+          }
+        },
+        "boardgames": "Familiar"
+      }
+    }
+  }]
+}
