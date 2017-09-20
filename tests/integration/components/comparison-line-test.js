@@ -3,8 +3,8 @@ import { describe, it } from 'mocha';
 import { setupComponentTest } from 'ember-mocha';
 import hbs from 'htmlbars-inline-precompile';
 
-describe('Integration | Component | info card', function () {
-  setupComponentTest('info-card', {
+describe('Integration | Component | comparison line', function () {
+  setupComponentTest('comparison-line', {
     integration: true
   });
 
@@ -13,12 +13,12 @@ describe('Integration | Component | info card', function () {
     // Handle any actions with this.on('myAction', function(val) { ... });
     // Template block usage:
     // this.render(hbs`
-    //   {{#info-card}}
+    //   {{#comparison-line}}
     //     template content
-    //   {{/info-card}}
+    //   {{/comparison-line}}
     // `);
 
-    this.render(hbs`{{info-card}}`);
+    this.render(hbs`{{comparison-line}}`);
     expect(this.$()).to.have.length(1);
   });
 });

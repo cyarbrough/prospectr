@@ -7,7 +7,7 @@ const { run } = Ember;
 describe('Unit | Route | index/prospect', function () {
   setupTest('route:index/prospect', {
     // Specify the other units that are required for this test.
-    needs: ['service:ajax', 'model:prospect']
+    needs: ['service:ajax', 'model:prospect', 'controller:index/prospect']
   });
 
   it('exists', function () {
@@ -69,6 +69,18 @@ describe('Unit | Route | index/prospect', function () {
       result.then((data) => {
         expect(data).to.be.equal('error');
       });
+    });
+    it('sets job in controller in setupController', function () {
+      let result,
+        route = this.subject({
+          modelFor() {
+            return 'job';
+          }
+        });
+
+      route.setupController();
+      result = route.controllerFor('index/prospect').get('job');
+      expect(result).to.be.equal('job');
     });
   });
 });

@@ -14,7 +14,7 @@ export default Component.extend({
    * Components class names
    * @var []
    */
-  classNames: ['info-card'],
+  classNames: ['card-info'],
   classNameBindings: ['isEmployer'],
 
   /******************************** Computed */

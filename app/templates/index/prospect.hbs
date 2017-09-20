@@ -2,7 +2,7 @@
 {{#if model.fileError}}
   {{model.fileError}}
 {{else}}
-  {{info-card name=model.name headline=model.headline avatar=model.avatar}}
+  {{card-info name=model.name headline=model.headline avatar=model.avatar}}
 {{/if}} <br>
-<br>{{info-card name=job.companyName headline=job.headline avatar=job.avatar isEmployer=true}}
-<br>
+<br>{{card-info name=job.companyName headline=job.headline avatar=job.avatar isEmployer=true}}
+<br>{{card-essentials jobEssentials=job.essentials prospectEssentials=model.essentials}}

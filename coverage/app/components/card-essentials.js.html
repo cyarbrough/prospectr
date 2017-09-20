@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for app/models/profile.js</title>
+    <title>Code coverage report for app/components/card-essentials.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">all files</a> / <a href="index.html">app/models/</a> profile.js
+      <a href="../../index.html">all files</a> / <a href="index.html">app/components/</a> card-essentials.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -55,7 +55,29 @@
 10
 11
 12
-13</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -67,16 +89,60 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import DS from 'ember-data';
-const { attr, Model } = DS;
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Ember from 'ember';
+const { Component, computed } = Ember;
 &nbsp;
-export default Model.extend({
+export default Component.extend({
+  /******************************** Passed-In Variables */
+  /**
+   * Job Essentials model 
+   * @var {*}
+   */
+  jobEssentials: null,
+  /**
+   * Prospect Essentials model 
+   * @var {*}
+   */
+  prospectEssentials: null,
+&nbsp;
   /******************************** Variables */
-  newFeatures: attr('number'),
-  clientSupport: attr('number'),
-  documentation: attr('number'),
-  maintenance: attr('number'),
-  meetings: attr('number')
+  /**
+   * Components class names
+   * @var []
+   */
+  classNames: ['card-essentials'],
+  /**
+   * Alias of jobEssentials
+   * @var {*}
+   */
+  job: computed.alias('jobEssentials'),
+  /**
+   * Alias of prospectEssentials
+   * @var {*}
+   */
+  prospect: computed.alias('prospectEssentials')
 });
 &nbsp;
 &nbsp;</pre></td></tr>
