@@ -3,6 +3,7 @@ const { attr, belongsTo, Model } = DS;
 
 export default Model.extend({
   /******************************** Variables */
+  avatar: attr('string'),
   name: attr('string'),
   headline: attr('string'),
   other: attr(),

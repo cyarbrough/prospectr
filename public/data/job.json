@@ -3,7 +3,9 @@
     "type": "jobs",
     "id": "1",
     "attributes": {
-      "headline": "Gridium Front-end Developer"
+      "company-name": "Gridium",
+      "avatar": "/images/avatars/avatar-gridium.png",
+      "headline": "Front-end Developer"
     },
     "relationships": {
       "essentials": {

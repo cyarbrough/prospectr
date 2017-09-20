@@ -2,6 +2,7 @@
 {{#if model.fileError}}
   {{model.fileError}}
 {{else}}
-  <br>{{model.name}}
-  <br>{{model.headline}}
+  {{info-card name=model.name headline=model.headline avatar=model.avatar}}
 {{/if}} <br>
+<br>{{info-card name=job.companyName headline=job.headline avatar=job.avatar isEmployer=true}}
+<br>

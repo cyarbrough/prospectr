@@ -2,6 +2,7 @@ import Ember from 'ember';
 const { inject, Route } = Ember;
 
 export default Route.extend({
+  /******************************** Variables */
   /**
    * Services
    */
@@ -43,5 +44,17 @@ export default Route.extend({
     return this.get('ajax').request('data/' + dataName + '.json').
       then((prospectData) => { return this.handleProspectSuccess(prospectData); }).
       catch(() => { return this.handleProspectError(); });
+  },
+  /**
+   * Setups the controller, and loads starter template data
+   * @param {*} controller 
+   * @param {*} model 
+   */
+  setupController(controller, model) {
+    this._super(controller, model);
+
+    let job = this.modelFor('index');
+
+    this.controllerFor('index/prospect').set('job', job);
   }
 });
