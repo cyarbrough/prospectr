@@ -3,8 +3,8 @@ import { describe, it } from 'mocha';
 import { setupComponentTest } from 'ember-mocha';
 import hbs from 'htmlbars-inline-precompile';
 
-describe('Integration | Component | card methodology', function () {
-  setupComponentTest('card-methodology', {
+describe('Integration | Component | card specifications', function () {
+  setupComponentTest('card-specifications', {
     integration: true
   });
 
@@ -13,12 +13,12 @@ describe('Integration | Component | card methodology', function () {
     // Handle any actions with this.on('myAction', function(val) { ... });
     // Template block usage:
     // this.render(hbs`
-    //   {{#card-methodology}}
+    //   {{#card-specification}}
     //     template content
-    //   {{/card-methodology}}
+    //   {{/card-specification}}
     // `);
 
-    this.render(hbs`{{card-methodology}}`);
+    this.render(hbs`{{card-specification}}`);
     expect(this.$()).to.have.length(1);
   });
 });
