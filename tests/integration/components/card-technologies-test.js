@@ -3,22 +3,22 @@ import { describe, it } from 'mocha';
 import { setupComponentTest } from 'ember-mocha';
 import hbs from 'htmlbars-inline-precompile';
 
-describe('Integration | Component | card technologies', function () {
-  setupComponentTest('card-technologies', {
+describe('Integration | Component | card skills', function() {
+  setupComponentTest('card-skills', {
     integration: true
   });
 
-  it('renders', function () {
+  it('renders', function() {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.on('myAction', function(val) { ... });
     // Template block usage:
     // this.render(hbs`
-    //   {{#card-specification}}
+    //   {{#card-skills}}
     //     template content
-    //   {{/card-specification}}
+    //   {{/card-skills}}
     // `);
 
-    this.render(hbs`{{card-technologies}}`);
+    this.render(hbs`{{card-skills}}`);
     expect(this.$()).to.have.length(1);
   });
 });
