@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for app/models/methodology.js</title>
+    <title>Code coverage report for app/components/match-rating.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">all files</a> / <a href="index.html">app/models/</a> methodology.js
+      <a href="../../index.html">all files</a> / <a href="index.html">app/components/</a> match-rating.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>9/9</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>9/9</span>
       </div>
     </div>
   </div>
@@ -92,7 +92,12 @@
 47
 48
 49
-50</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+50
+51
+52
+53
+54
+55</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -117,79 +122,89 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import DS from 'ember-data';
-const { attr, Model } = DS;
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Ember from 'ember';
+const { Component, computed } = Ember;
 &nbsp;
-export default Model.extend({
+export default Component.extend({
+  /******************************** Passed-In Variables */
+  /**
+   * Job Essentials model 
+   * @var {number}
+   */
+  matchPercent: 0,
+&nbsp;
   /******************************** Variables */
-  codeReviews: attr('boolean', { defaultValue: true }),
-  prototyping: attr('boolean', { defaultValue: true }),
-  failFast: attr('boolean', { defaultValue: true }),
-  unitTests: attr('boolean', { defaultValue: true }),
-  integrationTests: attr('boolean', { defaultValue: true }),
-  buildServer: attr('array-enum', {
-    options: [
-      'Not Yet Chosen',
-      'Jenkins',
-      'Travis',
-      'Codeship',
-      'CircleCI'
-    ],
-    defaultValue: ['Not Yet Chosen']
-  }),
-  staticCodeAnalysis: attr('array-enum', {
-    options: [
-      'Not Yet Chosen',
-      'ESLint'
-    ],
-    defaultValue: ['Not Yet Chosen']
-  }),
-  versionControl: attr('array-enum', {
-    options: [
-      'Not Yet Chosen',
-      'Git',
-      'BitBucket'
-    ],
-    defaultValue: ['Not Yet Chosen']
-  }),
-  issueTracker: attr('array-enum', {
-    options: [
-      'Not Yet Chosen',
-      'GitHub',
-      'Jira',
-      'Tikkit'
-    ],
-    defaultValue: ['Not Yet Chosen']
-  }),
-  standUps: attr('boolean', { defaultValue: true }),
-  quickStart: attr('boolean', { defaultValue: true }),
-  commitOnDayOne: attr('boolean', { defaultValue: true })
-});
+  /**
+   * Components class names
+   * @var {[]}
+   */
+  classNames: ['match-rating'],
+  classNameBindings: ['isLow', 'isMid', 'isHigh'],
 &nbsp;
+  /******************************** Computed */
+  /**
+   * Components class names
+   * @var {[]}
+   */
+  iconName: computed('matchPercent', function () {
+    if (this.get('isHigh')) {
+      return 'heart';
+    } else if (this.get('isMid')) {
+      return 'check-circle';
+    }
+    return 'exclamation-triangle';
+  }),
+  /**
+   * Indicates if the match rating is high
+   * @var {boolean}
+   */
+  isHigh: computed('matchPercent', function () {
+    return this.get('matchPercent') &gt;= 75;
+  }),
+  /**
+   * Indicates if the match rating is low
+   * @var {boolean}
+   */
+  isLow: computed('matchPercent', function () {
+    return this.get('matchPercent') &lt; 50;
+  }),
+  /**
+   * Indicates if the match rating is mid
+   * @var {boolean}
+   */
+  isMid: computed('matchPercent', function () {
+    return this.get('matchPercent') &gt;= 50 &amp;&amp; this.get('matchPercent') &lt; 75;
+  })
+});
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
