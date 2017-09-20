@@ -43,53 +43,32 @@ describe('Unit | Route | index/prospect', function () {
       result = route.handleProspectError();
       expect(result.fileError).to.be.ok;
     });
-    it('returns an error from model', function () {
+    it('returns a model from model', function () {
       let result,
         route = this.subject({
-          ajax: {
-            request() {
-              return {
-                then() {
-                  return {
-                    catch(functionData) {
-                      return functionData();
-                    }
-                  };
-                }
-              };
-            }
-          },
-          handleProspectError() {
-            return 'error';
+          handleProspectSuccess() {
+            return 'model';
           }
         });
 
       result = route.model();
-      expect(result).to.be.equal('error');
+      result.then((data) => {
+        expect(data).to.be.equal('model');
+      });
+
     });
     it('returns an error from model with param', function () {
       let result,
         route = this.subject({
-          ajax: {
-            request() {
-              return {
-                then() {
-                  return {
-                    catch(functionData) {
-                      return functionData();
-                    }
-                  };
-                }
-              };
-            }
-          },
           handleProspectError() {
             return 'error';
           }
         });
 
       result = route.model({ name: 'tester' });
-      expect(result).to.be.equal('error');
+      result.then((data) => {
+        expect(data).to.be.equal('error');
+      });
     });
   });
 });

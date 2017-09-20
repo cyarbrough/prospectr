@@ -39,8 +39,9 @@ export default Route.extend({
     if (params && params.name) {
       dataName = params.name;
     }
+
     return this.get('ajax').request('data/' + dataName + '.json').
       then((prospectData) => { return this.handleProspectSuccess(prospectData); }).
-      catch((prospectData) => { return this.handleProspectError(prospectData); });
+      catch(() => { return this.handleProspectError(); });
   }
 });
