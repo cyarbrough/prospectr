@@ -1,0 +1,44 @@
+{{outlet}}
+<br>{{model.headline}}
+<br>{{model.essentials.locations}}
+<br>{{model.essentials.employment.values}}
+<br>
+{{#each model.essentials.experience.values as |item|}}
+  {{item}}
+{{/each}}
+<br>{{model.essentials.startDate}}
+<br>{{model.essentials.companySize}}
+<br>{{model.essentials.teamSize.min}} - {{model.essentials.teamSize.max}}
+<br>
+<br>{{model.methodology.codeReviews}}
+<br>{{model.methodology.prototyping}}
+<br>{{model.methodology.failFast}}
+<br>{{model.methodology.unitTests}}
+<br>{{model.methodology.integrationTests}}
+<br>{{model.methodology.buildServer.values}}
+<br>{{model.methodology.staticCodeAnalysis.values}}
+<br>{{model.methodology.versionControl.values}}
+<br>{{model.methodology.issueTracker.values}}
+<br>{{model.methodology.standUps}}
+<br>{{model.methodology.quickStart}}
+<br>{{model.methodology.commitOnDayOne}}
+<br>
+<br>{{model.specifications.workload}}
+<br>{{model.specifications.workWeek}}
+<br>{{model.specifications.schedule}}
+<br>{{model.specifications.remote}}
+<br>{{model.specifications.pto}}
+<br>
+<br>{{model.profile.newFeatures}}
+<br>{{model.profile.clientSupport}}
+<br>{{model.profile.documentation}}
+<br>{{model.profile.maintenance}}
+<br>{{model.profile.meetings}}
+<br>
+<br>
+{{#each model.equipment.operatingSystem.values as |item|}}
+  {{item}}
+{{/each}}
+<br>{{model.equipment.computer.value}}
+<br>
+<br>{{model.technologies.skills.css3}}

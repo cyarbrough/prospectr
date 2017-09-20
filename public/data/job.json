@@ -1,0 +1,126 @@
+{
+  "data": [{
+    "type": "jobs",
+    "id": "1",
+    "attributes": {
+      "headline": "Gridium Front-end Developer"
+    },
+    "relationships": {
+      "essentials": {
+        "data": { 
+          "type": "essentials", "id": "1" }
+      },
+      "methodology": {
+        "data": { 
+          "type": "methodology", "id": "1" }
+      },
+      "specifications": {
+        "data": { 
+          "type": "specification", "id": "1" }
+      },
+      "profile": {
+        "data": { 
+          "type": "profile", "id": "1" }
+      },
+      "equipment": {
+        "data": { 
+          "type": "equipment", "id": "1" }
+      },
+      "technologies": {
+        "data": { 
+          "type": "technologies", "id": "1" }
+      }
+    }
+  }],
+  "included": [{
+    "type": "essentials",
+    "id": "1",
+    "attributes": {
+      "locations": "San Francisco",
+      "employment": ["Permanent"],
+      "experience": ["Junior", "Seasoned"],
+      "start-date": "2017-09-19",
+      "company-size": "Ten To Twenty",
+      "team-size": { "min": 1, "max": 6 }
+    }
+  },
+  {
+    "type": "methodology",
+    "id": "1",
+    "attributes": {
+      "code-reviews": true,
+      "prototyping": true,
+      "fail-fast": true,
+      "unit-tests": true,
+      "integration-tests": true,
+      "build-server": ["CircleCI"],
+      "static-code-analysis": ["Not Yet Chosen"],
+      "version-control": ["Git"],
+      "issue-tracker": ["Tikkit"],
+      "stand-ups": true,
+      "quick-start": true,
+      "commit-on-day-one": true
+    }
+  },
+  {
+    "type": "specification",
+    "id": "1",
+    "attributes": {
+      "workload": "1.0",
+      "work-week": 40,
+      "schedule": "Flexible",
+      "remote": "Required",
+      "pto": "Unlimited"
+    }
+  },
+  {
+    "type": "profile",
+    "id": "1",
+    "attributes": {
+      "new-features": 50,
+      "client-support": 9,
+      "documentation": 10,
+      "maintenance": 30,
+      "meetings": 1
+    }
+  },
+  {
+    "type": "equipment",
+    "id": "1",
+    "attributes": {
+      "operating-system": ["MacOSX", "CentOS"],
+      "computer": "Laptop"
+    }
+  },
+  {
+    "type": "technology",
+    "id": "1",
+    "attributes": {
+      "skills": {
+        "css3": "Good",
+        "html5": "Good",
+        "javascript": "Good",
+        "node": "Good",
+        "rest": "Good",
+        "uiux": "Familiar",
+        "design": "Familiar",
+        "testing": {
+          "oneof": {
+            "junit": "Good",
+            "mocha": "Good",
+            "jasmine": "Good",
+            "selenium": "Good"
+          }
+        },
+        "framework": {
+          "oneof": {
+            "react": "Familiar",
+            "vue": "Familiar",
+            "angular": "Familiar"
+          }
+        },
+        "boardgames": "Familiar"
+      }
+    }
+  }]
+}
