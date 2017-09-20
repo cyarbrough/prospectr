@@ -12,12 +12,22 @@ export default Component.extend({
   /******************************** Variables */
   /**
    * Components class names
-   * @var []
+   * @var {[]}
    */
   classNames: ['card-info'],
   classNameBindings: ['isEmployer'],
 
   /******************************** Computed */
+  /**
+   * Returns icon name based on isEmployer
+   * @var {string}
+   */
+  cardIcon: computed('isEmployer', function () {
+    if (this.get('isEmployer')) {
+      return 'building';
+    }
+    return 'child';
+  }),
   /**
    * Returns filler value for sub-headline
    * @var []

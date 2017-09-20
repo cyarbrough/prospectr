@@ -1,0 +1,28 @@
+/**
+  * Styles for overall app structure
+  */
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.info-cards {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  > .card-info {
+    flex-grow: 1;
+    width: 35%;
+  }
+
+  > .match-rating {
+    flex-grow: 5;
+  }
+}

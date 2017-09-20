@@ -1,12 +1,16 @@
-<!-- Employer Card -->
-{{#if model.fileError}}
-  {{model.fileError}}
-{{else}}
-  {{card-info name=model.name headline=model.headline avatar=model.avatar}}
-{{/if}} <br>
+<div class="info-cards">
+  <!-- Prospect Card -->
+  {{#if model.fileError}}
+    {{card-info name="Unknown Profile" headline="" avatar=""}}
+  {{else}}
+    {{card-info name=model.name headline=model.headline avatar=model.avatar}}
+  {{/if}}
+  <!--Match Rating -->
+  {{match-rating matchPercent=90}}
+  <!-- Employer Card -->
+  {{card-info name=job.companyName headline=job.headline avatar=job.avatar isEmployer=true}}
+</div>
 
-<!-- Employer Card -->
-{{card-info name=job.companyName headline=job.headline avatar=job.avatar isEmployer=true}}
 <!-- Essentials -->
 {{card-essentials jobEssentials=job.essentials prospectEssentials=model.essentials}}
 <!-- Essentials -->

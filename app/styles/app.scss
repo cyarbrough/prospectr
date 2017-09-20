@@ -1,3 +1,7 @@
-body {
-  background: #EEE;
-}
+@import '_base/variables';
+@import '_base/structure';
+@import '_base/general';
+@import '../../../node_modules/font-awesome/scss/font-awesome';
+@import 'components/card-info';
+@import 'components/match-rating';
+

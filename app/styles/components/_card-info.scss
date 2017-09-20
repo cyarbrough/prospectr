@@ -1,0 +1,101 @@
+/**
+  * Styles for card-info component
+  */
+
+.card-info {
+  // Local Variables
+  $background-color: #DDD;
+  $avatar-height: 70px;
+  $divit-height: 5px;
+
+  // Styles
+  background: $background-color;
+  border: 1px solid $color-border-default;
+  box-shadow: $shadow-level-1;
+  overflow: hidden;
+  padding: 5px;
+  position: relative;
+
+  > .avatar {
+    float: left;
+    height: $avatar-height;
+    margin: 0 10px 0 0;
+    overflow: hidden;
+    position: relative;
+    width: $avatar-height;
+
+    &::before {
+      border-bottom: $divit-height solid transparent;
+      border-left: $divit-height solid $background-color;
+      border-right: $divit-height solid transparent;
+      border-top: $divit-height solid $background-color;
+      content: '';
+      height: 0;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 0;
+    }
+
+    > .image {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  > .title {
+    display: inline-block;
+    font-size: 18px;
+    margin: 3px 0 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  > .headline {
+    color: $color-font-default-faded;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+
+    > .sub-headline {
+      color: $color-font-default-faded;
+      display: block;
+      font-size: 12px;
+      font-style: italic;
+      margin: 10px 0 0;
+      text-transform: uppercase;
+    }
+  }
+
+  > .flair {
+    color: $color-font-default-faded;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.is-employer {
+    text-align: right;
+
+    > .avatar {
+      float: right;
+      margin: 0 0 0 10px;
+
+      &::before {
+        border-bottom: $divit-height solid transparent;
+        border-left: $divit-height solid transparent;
+        border-right: $divit-height solid $background-color;
+        border-top: $divit-height solid $background-color;
+        left: auto;
+        right: 0;
+      }
+    }
+
+    > .flair {
+      left: 10px;
+      right: auto;
+    }
+  }
+}

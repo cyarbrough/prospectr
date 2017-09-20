@@ -1,11 +1,14 @@
 /* eslint-env node */
 'use strict';
 
-const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const EmberApp = require('ember-cli/lib/broccoli/ember-app'),
+  Funnel = require('broccoli-funnel');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    'ember-font-awesome': {
+      useScss: true
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -23,5 +26,12 @@ module.exports = function (defaults) {
 
   app.import('node_modules/normalize.css/normalize.css');
 
-  return app.toTree();
+  // Import FontAwesome
+  let fontAwesomeFonts = new Funnel('node_modules/font-awesome/fonts/', {
+    srcDir: '/',
+    include: ['**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff', '**/*.woff2'],
+    destDir: '/assets/fonts'
+  });
+
+  return app.toTree([fontAwesomeFonts]);
 };

@@ -1,0 +1,16 @@
+/**
+  * Styles for overall app styles
+  */
+
+* {
+  font-family: $font-family-default;
+}
+
+body {
+  background: #EEE;
+}
+
+.app-title {
+  text-align: center;
+  text-transform: lowercase;
+}

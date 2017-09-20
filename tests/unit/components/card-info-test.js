@@ -20,6 +20,16 @@ describe('Unit | Component | card info', function () {
   });
 
   describe('computed', function () {
+    it('returns different data from cardIcon based on isEmployer', function () {
+      let component = this.subject(),
+        result1, result2;
+
+      result1 = component.get('cardIcon');
+      component.set('isEmployer', true);
+      result2 = component.get('cardIcon');
+
+      expect(result1).to.not.be.equal(result2);
+    });
     it('returns different data from subHeadline based on isEmployer', function () {
       let component = this.subject(),
         result1, result2;

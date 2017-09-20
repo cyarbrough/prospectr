@@ -1,0 +1,26 @@
+/**
+  * Variables for overall app styles
+  */
+
+/******************************** Colors */
+// Palatte
+$color-1: #99B898;
+$color-2: #FECEAB;
+$color-3: #FF847C;
+$color-4: #E84A5F;
+$color-5: #2A363B;
+// Variables
+$color-font-default: $color-5;
+$color-font-default-faded: transparentize($color-font-default, 0.5);
+$color-low: $color-2;
+$color-mid: $color-1;
+$color-high: $color-3;
+$color-border-default: $color-font-default-faded;
+
+/******************************** Fonts */
+$font-family-default: 'Montserrat', sans-serif;
+// FontAwesome
+$fa-font-path: '../assets/fonts';
+
+/******************************** Shadows */
+$shadow-level-1: 1px 1px 2px 0 rgba(0, 0, 0, 0.25);

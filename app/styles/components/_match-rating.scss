@@ -1,0 +1,31 @@
+/**
+  * Styles for match-rating component
+  */
+
+.match-rating {
+  font-size: 45px;
+  position: relative;
+  text-align: center;
+
+  &::after {
+    border-top: 1px dashed $color-border-default;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: -1;
+  }
+
+  &.is-low {
+    color: $color-low;
+  }
+
+  &.is-mid {
+    color: $color-mid;
+  }
+
+  &.is-high {
+    color: $color-high;
+  }
+}
