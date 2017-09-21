@@ -1,0 +1,46 @@
+/**
+  * Styles for profile-chart-legend component
+  */
+
+.profile-chart-legend {
+  > .item {
+    color: $color-font-default-faded;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 5px;
+
+    > .fa {
+      margin: 0 5px 0 0;
+    }
+  }
+
+  > .item-0 {
+    > .fa {
+      color: $color-profile-1;
+    }
+  }
+
+  > .item-1 {
+    > .fa {
+      color: $color-profile-2;
+    }
+  }
+
+  > .item-2 {
+    > .fa {
+      color: $color-profile-3;
+    }
+  }
+
+  > .item-3 {
+    > .fa {
+      color: $color-profile-4;
+    }
+  }
+
+  > .item-4 {
+    > .fa {
+      color: $color-profile-5;
+    }
+  }
+}

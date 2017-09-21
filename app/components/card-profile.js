@@ -26,6 +26,11 @@ export default Component.extend({
    */
   job: computed.alias('jobProfile'),
   /**
+   * Columns to display in legend
+   * @var {[]}
+   */
+  legendColumns: ['New Features', 'Client Support', 'Documentation', 'Maintenance', 'Meetings'],
+  /**
    * Alias of prospectEssentials
    * @var {*}
    */
