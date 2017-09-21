@@ -109,20 +109,22 @@
         "design": "Good",
         "testing": {
           "oneof": {
-            "junit": "Good",
-            "mocha": "Good",
-            "jasmine": "Good",
-            "selenium": "Good"
+            "junit": "None",
+            "qunit": "Good",
+            "mocha": "Expert",
+            "jasmine": "Familiar",
+            "selenium": "Familiar"
           }
         },
         "framework": {
           "oneof": {
             "ember": "Expert",
             "react": "Familiar",
+            "vue": "None",
             "angular": "Familiar"
           }
         },
-        "boardgames": "Familiar"
+        "boardgames": "Good"
       }
     }
   }]

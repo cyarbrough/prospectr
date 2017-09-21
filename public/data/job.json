@@ -109,6 +109,7 @@
         "testing": {
           "oneof": {
             "junit": "Good",
+            "qunit": "None",
             "mocha": "Good",
             "jasmine": "Good",
             "selenium": "Good"
@@ -116,6 +117,7 @@
         },
         "framework": {
           "oneof": {
+            "ember": "Familiar",
             "react": "Familiar",
             "vue": "Familiar",
             "angular": "Familiar"

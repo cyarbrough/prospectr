@@ -49,8 +49,20 @@ export default Component.extend({
 
   /******************************** Computed */
   /**
-   * Alias of jobEssentials
-   * @var {*}
+   * CSS appropriate class name, rendered from displayType
+   * @var {string}
+   */
+  classType: computed('displayType', function () {
+    let type = this.get('displayType');
+
+    if (type) {
+      return 'is-' + dasherize(type).toLowerCase().replace(/[\W]+/g, '');
+    }
+    return type;
+  }),
+  /**
+   * CSS appropriate class name, rendered from title
+   * @var {string}
    */
   classTitle: computed('title', function () {
     let title = this.get('title');
@@ -65,8 +77,12 @@ export default Component.extend({
    * @var {string}
    */
   displayComponent: computed('displayType', function () {
-    if (this.get('displayType') === 'boolean') {
+    let type = this.get('displayType');
+
+    if (type === 'boolean') {
       return 'comparison-row-boolean';
+    } else if (type === 'chart') {
+      return 'comparison-row-chart';
     }
     return 'comparison-row-string';
   })

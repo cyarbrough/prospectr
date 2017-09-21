@@ -102,20 +102,29 @@
       "skills": {
         "css3": "Familiar",
         "html5": "Familiar",
-        "javascript": "Familiar",
-        "node": "Familiar",
-        "rest": "Familiar",
+        "javascript": "None",
+        "node": "None",
+        "rest": "None",
         "uiux": "Good",
         "design": "Good",
         "testing": {
           "oneof": {
+            "junit": "None",
+            "qunit": "None",
+            "mocha": "None",
+            "jasmine": "None",
+            "selenium": "None"
           }
         },
         "framework": {
           "oneof": {
+            "ember": "None",
+            "react": "Familiar",
+            "vue": "None",
+            "angular": "Familiar"
           }
         },
-        "boardgames": "Familiar"
+        "boardgames": "None"
       }
     }
   }]

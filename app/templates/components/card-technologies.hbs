@@ -1,2 +1,42 @@
 <h2 class="title">Technologies</h2>
-{{prospect.skills.css3}} CSS3 {{job.skills.css3}}
+<!-- CSS3 -->
+{{comparison-row title="CSS3" left=prospect.skills.css3 right=job.skills.css3 displayType="chart"}}
+<!-- html5 -->
+{{comparison-row title="HTML5" left=prospect.skills.html5 right=job.skills.html5 displayType="chart"}}
+<!-- javascript -->
+{{comparison-row title="Javascript" left=prospect.skills.javascript right=job.skills.javascript displayType="chart"}}
+<!-- node -->
+{{comparison-row title="Node" left=prospect.skills.node right=job.skills.node displayType="chart"}}
+<!-- rest -->
+{{comparison-row title="REST" left=prospect.skills.rest right=job.skills.rest displayType="chart"}}
+<!-- uiux -->
+{{comparison-row title="UI / UX" left=prospect.skills.uiux right=job.skills.uiux displayType="chart"}}
+<!-- design -->
+{{comparison-row title="Design" left=prospect.skills.design right=job.skills.design displayType="chart"}}
+<br>
+<!-- testing -->
+{{comparison-row title="Testing" displayType="chart"}}
+<!-- junit -->
+{{comparison-row title="junit" left=prospect.skills.testing.oneof.junit right=job.skills.testing.oneof.junit displayType="chart"}}
+<!-- qunit -->
+{{comparison-row title="qunit" left=prospect.skills.testing.oneof.qunit right=job.skills.testing.oneof.qunit displayType="chart"}}
+<!-- mocha -->
+{{comparison-row title="mocha" left=prospect.skills.testing.oneof.mocha right=job.skills.testing.oneof.mocha displayType="chart"}}
+<!-- jasmine -->
+{{comparison-row title="jasmine" left=prospect.skills.testing.oneof.jasmine right=job.skills.testing.oneof.jasmine displayType="chart"}}
+<!-- selenium -->
+{{comparison-row title="selenium" left=prospect.skills.testing.oneof.selenium right=job.skills.testing.oneof.selenium displayType="chart"}}
+<br>
+<!-- frameworks -->
+{{comparison-row title="Frameworks" displayType="chart"}}
+<!-- ember -->
+{{comparison-row title="ember" left=prospect.skills.framework.oneof.ember right=job.skills.framework.oneof.ember displayType="chart"}}
+<!-- react -->
+{{comparison-row title="react" left=prospect.skills.framework.oneof.react right=job.skills.framework.oneof.react displayType="chart"}}
+<!-- vue -->
+{{comparison-row title="vue" left=prospect.skills.framework.oneof.vue right=job.skills.framework.oneof.vue displayType="chart"}}
+<!-- angular -->
+{{comparison-row title="angular" left=prospect.skills.framework.oneof.angular right=job.skills.framework.oneof.angular displayType="chart"}}
+<br>
+<!-- Board Games -->
+{{comparison-row title="Board Games" left=prospect.skills.boardgames right=job.skills.boardgames displayType="chart"}}
