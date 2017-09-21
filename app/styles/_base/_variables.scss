@@ -27,6 +27,12 @@ $color-card-background-default: #F7F7F7;
 $color-card-background-hover: darken($color-card-background-default, 3%);
 $color-card-background-job: lighten(desaturate($color-6, 15%), 20%);
 $color-card-background-prospect: lighten(desaturate($color-1, 10%), 20%);
+// Profile Chart
+$color-profile-1: #A8E6CE;
+$color-profile-2: #DCEDC2;
+$color-profile-3: #FFD3B5;
+$color-profile-4: #FFAAA6;
+$color-profile-5: #FF8C94;
 
 /******************************** Fonts */
 $font-family-default: 'Montserrat', sans-serif;

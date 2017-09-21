@@ -1,11 +1,5 @@
 <h2 class="title">Work Profile</h2>
-<!-- New Features -->
-{{comparison-row title="New Features" left=prospect.newFeatures right=job.newFeatures}}
-<!-- client support -->
-{{comparison-row title="Client Support" left=prospect.clientSupport right=job.clientSupport}}
-<!-- documentation -->
-{{comparison-row title="Documentation" left=prospect.documentation right=job.documentation}}
-<!-- maintenance -->
-{{comparison-row title="Maintenance" left=prospect.maintenance right=job.maintenance}}
-<!-- meetings -->
-{{comparison-row title="Meetings" left=prospect.meetings right=job.meetings}}
+<!-- job chart -->
+{{profile-chart profile=jobProfile}}
+<!-- prospect chart -->
+{{profile-chart profile=prospectProfile display="prospect"}}
