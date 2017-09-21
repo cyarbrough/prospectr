@@ -1,0 +1,121 @@
+{
+  "data": [{
+    "type": "prospect",
+    "id": "2",
+    "attributes": {
+      "name": "Billy Everydev",
+      "avatar": "/images/avatars/avatar-cy.png",
+      "headline": "Front-end Brogrammer"
+    },
+    "relationships": {
+      "essentials": {
+        "data": { 
+          "type": "essentials", "id": "2" }
+      },
+      "methodology": {
+        "data": { 
+          "type": "methodology", "id": "2" }
+      },
+      "specifications": {
+        "data": { 
+          "type": "specification", "id": "2" }
+      },
+      "profile": {
+        "data": { 
+          "type": "profile", "id": "2" }
+      },
+      "equipment": {
+        "data": { 
+          "type": "equipment", "id": "2" }
+      },
+      "technologies": {
+        "data": { 
+          "type": "technologies", "id": "2" }
+      }
+    }
+  }],
+  "included": [{
+    "type": "essentials",
+    "id": "2",
+    "attributes": {
+      "locations": "San Francisco, CA",
+      "employment": ["Temporary"],
+      "experience": ["Graybeard"],
+      "start-date": "2019-01-01",
+      "company-size": "Ten To Twenty",
+      "team-size": { "min": 1, "max": 2 }
+    }
+  },
+  {
+    "type": "methodology",
+    "id": "2",
+    "attributes": {
+      "code-reviews": false,
+      "prototyping": true,
+      "fail-fast": false,
+      "unit-tests": false,
+      "integration-tests": false,
+      "build-server": ["Not Yet Chosen"],
+      "static-code-analysis": ["Not Yet Chosen"],
+      "version-control": ["Not Yet Chosen"],
+      "issue-tracker": ["Not Yet Chosen"],
+      "stand-ups": false,
+      "quick-start": false,
+      "commit-on-day-one": false
+    }
+  },
+  {
+    "type": "specification",
+    "id": "2",
+    "attributes": {
+      "workload": "1.0",
+      "work-week": 40,
+      "schedule": "Flexible",
+      "remote": "Required",
+      "pto": "Unlimited"
+    }
+  },
+  {
+    "type": "profile",
+    "id": "2",
+    "attributes": {
+      "new-features": 90,
+      "client-support": 2,
+      "documentation": 2,
+      "maintenance": 5,
+      "meetings": 1
+    }
+  },
+  {
+    "type": "equipment",
+    "id": "2",
+    "attributes": {
+      "operating-system": ["MacOSX"],
+      "computer": "Laptop"
+    }
+  },
+  {
+    "type": "technology",
+    "id": "2",
+    "attributes": {
+      "skills": {
+        "css3": "Familiar",
+        "html5": "Familiar",
+        "javascript": "Familiar",
+        "node": "Familiar",
+        "rest": "Familiar",
+        "uiux": "Good",
+        "design": "Good",
+        "testing": {
+          "oneof": {
+          }
+        },
+        "framework": {
+          "oneof": {
+          }
+        },
+        "boardgames": "Familiar"
+      }
+    }
+  }]
+}
