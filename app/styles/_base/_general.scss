@@ -18,3 +18,15 @@ body {
 .ember-tooltip {
   font-size: 11px;
 }
+
+.main-logo {
+  color: $color-high;
+  display: block;
+  font-size: 30px;
+  margin: 0 auto;
+  text-align: center;
+
+  > .logo {
+    margin-left: 2px;
+  }
+}

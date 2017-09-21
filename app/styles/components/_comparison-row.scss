@@ -19,7 +19,7 @@
   > .right {
     font-family: $font-family-text;
     text-align: center;
-    width: 40%;
+    width: 38%;
 
     > .boolean {
       color: $color-bad;
@@ -29,6 +29,10 @@
       &.is-true {
         color: $color-good;
       }
+    }
+
+    &.is-chart {
+      width: 42%;
     }
   }
 
@@ -46,7 +50,11 @@
     font-size: $title-font-size;
     text-transform: lowercase;
     transition: all $transition-duration-fast $transition-ease;
-    width: 20%;
+    width: 24%;
+
+    &.is-chart {
+      width: 16%;
+    }
   }
 
   .chart {

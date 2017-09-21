@@ -49,6 +49,7 @@
     &:hover {
       box-shadow: $shadow-level-2;
       color: $color-card-background-default;
+      transform: scale(1.4, 1.4);
 
       > .match-rating {
         display: inline-block;

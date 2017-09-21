@@ -1,6 +1,18 @@
 /**
   * Animation Rules
   */
+@-webkit-keyframes zoomIn {
+  from {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+}
+
+@-webkit-keyframes zoomOut {
+  from {
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+}
+
 @keyframes zoomIn {
   from {
     transform: scale(0.9, 0.9);

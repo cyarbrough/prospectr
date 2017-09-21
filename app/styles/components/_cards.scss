@@ -31,4 +31,26 @@
     padding: 6px 0 3px;
     text-transform: uppercase;
   }
+
+  > .link {
+    color: $color-font-default-faded;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-font-default;
+    }
+  }
+
+  &.card-technologies {
+    padding: 0 20px;
+  }
+
+  &.card-samples {
+    margin-top: 4.5em;
+    padding-bottom: 15px;
+
+    > .title {
+      margin-bottom: 15px;
+    }
+  }
 }
