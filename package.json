@@ -12,6 +12,7 @@
   "scripts": {
     "build": "ember build",
     "coverage": "cross-env COVERAGE=true ember test",
+    "deploy-prod": "git push heroku master",
     "install-app": "npm install",
     "start": "ember server",
     "test": "ember test",
