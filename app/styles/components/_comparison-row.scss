@@ -19,6 +19,7 @@
   > .right {
     font-family: $font-family-text;
     text-align: center;
+    transition: all $transition-duration-fast $transition-ease;
     width: 38%;
 
     > .boolean {
@@ -32,15 +33,8 @@
     }
 
     &.is-chart {
+      transform-origin: center left;
       width: 42%;
-    }
-  }
-
-  > .left {
-    &.is-chart {
-      > .chart {
-        margin: 0 0 0 auto;
-      }
     }
   }
 
@@ -53,6 +47,7 @@
     width: 24%;
 
     &.is-chart {
+      transform-origin: center;
       width: 16%;
     }
   }
@@ -88,7 +83,10 @@
 
   > .left {
     &.is-chart {
+      transform-origin: center right;
+
       > .chart {
+        margin: 0 0 0 auto;
         text-align: right;
       }
     }
@@ -97,38 +95,29 @@
   &:hover {
     background: $color-card-background-hover;
     cursor: pointer;
-    font-size: $font-size + 2;
-    margin: 0 0 3px;
 
     > .left,
     > .right {
+      transform: scale(1.2);
+
       > .boolean {
-        font-size: $font-size + 8;
+        transform: scale(1.4);
+      }
+
+      &.is-chart {
+        transform: scale(1.4);
       }
     }
 
     > .title {
       color: $color-bad;
-      font-size: $title-font-size + 2;
       font-weight: bold;
+      transform: scale(1.2);
     }
 
     &.is-equal {
       > .title {
         color: $color-good;
-      }
-    }
-
-    .chart {
-      transform: scale(1.3);
-      transform-origin: center left;
-    }
-
-    > .left {
-      &.is-chart {
-        > .chart {
-          transform-origin: center right;
-        }
       }
     }
   }
