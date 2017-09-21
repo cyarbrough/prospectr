@@ -2,19 +2,15 @@
   * Styles for card-info component
   */
 
-.card-info {
+.card.card-info {
   // Local Variables
-  $background-color: #DDD;
   $avatar-height: 70px;
   $divit-height: 5px;
 
   // Styles
-  background: $background-color;
-  border: 1px solid $color-border-default;
-  box-shadow: $shadow-level-1;
-  overflow: hidden;
-  padding: 5px;
-  position: relative;
+  background: $color-card-background-prospect;
+  margin: 0;
+  text-align: left;
 
   > .avatar {
     float: left;
@@ -27,9 +23,9 @@
     &::before,
     &::after {
       border-bottom: $divit-height solid transparent;
-      border-left: $divit-height solid $background-color;
+      border-left: $divit-height solid $color-card-background-prospect;
       border-right: $divit-height solid transparent;
-      border-top: $divit-height solid $background-color;
+      border-top: $divit-height solid $color-card-background-prospect;
       content: '';
       height: 0;
       left: 0;
@@ -39,9 +35,9 @@
     }
 
     &::after {
-      border-bottom: $divit-height solid $background-color;
+      border-bottom: $divit-height solid $color-card-background-prospect;
       border-left: $divit-height solid transparent;
-      border-right: $divit-height solid $background-color;
+      border-right: $divit-height solid $color-card-background-prospect;
       border-top: $divit-height solid transparent;
       bottom: 0;
       left: auto;
@@ -56,8 +52,11 @@
   }
 
   > .title {
+    background: none;
+    color: $color-font-default;
     display: inline-block;
     font-size: 18px;
+    line-height: 18px;
     margin: 3px 0 0;
     padding: 0;
     text-transform: uppercase;
@@ -89,6 +88,7 @@
   }
 
   &.is-employer {
+    background: $color-card-background-job;
     text-align: right;
 
     > .avatar {
@@ -98,15 +98,15 @@
       &::before {
         border-bottom: $divit-height solid transparent;
         border-left: $divit-height solid transparent;
-        border-right: $divit-height solid $background-color;
-        border-top: $divit-height solid $background-color;
+        border-right: $divit-height solid $color-card-background-job;
+        border-top: $divit-height solid $color-card-background-job;
         left: auto;
         right: 0;
       }
 
       &::after {
-        border-bottom: $divit-height solid $background-color;
-        border-left: $divit-height solid $background-color;
+        border-bottom: $divit-height solid $color-card-background-job;
+        border-left: $divit-height solid $color-card-background-job;
         border-right: $divit-height solid transparent;
         border-top: $divit-height solid transparent;
         bottom: 0;

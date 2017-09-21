@@ -1,7 +1,8 @@
 @import '_base/variables';
+@import '../../../node_modules/font-awesome/scss/font-awesome';
 @import '_base/structure';
 @import '_base/general';
-@import '../../../node_modules/font-awesome/scss/font-awesome';
 @import 'components/card-info';
+@import 'components/cards';
 @import 'components/match-rating';
 

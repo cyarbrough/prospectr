@@ -9,6 +9,7 @@ $color-2: #FECEAB;
 $color-3: #FF847C;
 $color-4: #E84A5F;
 $color-5: #2A363B;
+$color-6: #99A9C5;
 // Variables
 $color-font-default: $color-5;
 $color-font-default-faded: transparentize($color-font-default, 0.5);
@@ -16,6 +17,10 @@ $color-low: $color-2;
 $color-mid: $color-1;
 $color-high: $color-3;
 $color-border-default: $color-font-default-faded;
+$color-background-default: #EEE;
+$color-card-background-default: #DDD;
+$color-card-background-job: lighten(desaturate($color-6, 15%), 20%);
+$color-card-background-prospect: lighten(desaturate($color-1, 10%), 20%);
 
 /******************************** Fonts */
 $font-family-default: 'Montserrat', sans-serif;

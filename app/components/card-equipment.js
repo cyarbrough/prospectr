@@ -19,7 +19,7 @@ export default Component.extend({
    * Components class names
    * @var []
    */
-  classNames: ['card-equipment'],
+  classNames: ['card', 'card-equipment'],
   /**
    * Alias of jobEssentials
    * @var {*}
