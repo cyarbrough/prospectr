@@ -14,7 +14,7 @@
     position: absolute;
     right: 0;
     top: 50%;
-    z-index: -1;
+    z-index: -2;
   }
 
   &.is-low {
@@ -27,5 +27,27 @@
 
   &.is-high {
     color: $color-high;
+  }
+
+  > .fa {
+    &::after {
+      background: #FFF;
+      border-radius: 50%;
+      content: '';
+      height: 26px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      z-index: -1;
+    }
+
+    &.fa-check-circle {
+      &::after {
+        height: 30px;
+        width: 30px;
+      }
+    }
   }
 }

@@ -24,7 +24,8 @@
     position: relative;
     width: $avatar-height;
 
-    &::before {
+    &::before,
+    &::after {
       border-bottom: $divit-height solid transparent;
       border-left: $divit-height solid $background-color;
       border-right: $divit-height solid transparent;
@@ -35,6 +36,17 @@
       position: absolute;
       top: 0;
       width: 0;
+    }
+
+    &::after {
+      border-bottom: $divit-height solid $background-color;
+      border-left: $divit-height solid transparent;
+      border-right: $divit-height solid $background-color;
+      border-top: $divit-height solid transparent;
+      bottom: 0;
+      left: auto;
+      right: 0;
+      top: auto;
     }
 
     > .image {
@@ -90,6 +102,17 @@
         border-top: $divit-height solid $background-color;
         left: auto;
         right: 0;
+      }
+
+      &::after {
+        border-bottom: $divit-height solid $background-color;
+        border-left: $divit-height solid $background-color;
+        border-right: $divit-height solid transparent;
+        border-top: $divit-height solid transparent;
+        bottom: 0;
+        left: 0;
+        right: auto;
+        top: auto;
       }
     }
 

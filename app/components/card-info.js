@@ -24,7 +24,7 @@ export default Component.extend({
    */
   cardIcon: computed('isEmployer', function () {
     if (this.get('isEmployer')) {
-      return 'building';
+      return 'building-o';
     }
     return 'child';
   }),
