@@ -1,16 +1,16 @@
 <h2 class="title">Essentials</h2>
 <!-- locations -->
-{{comparison-line title="Locations" left=prospect.locations right=job.locations}}
+{{comparison-row title="Locations" left=prospect.locations right=job.locations}}
 <!-- employment -->
-{{comparison-line title="Employment" left=prospect.employment.values right=job.employment.values}}
+{{comparison-row title="Employment" left=prospect.employment.values right=job.employment.values}}
 <!-- experience -->
-{{comparison-line title="Experience" left=prospect.experience.values right=job.experience.values}}
+{{comparison-row title="Experience" left=prospect.experience.values right=job.experience.values}}
 <!-- start date -->
-{{comparison-line title="Start Date" left=prospect.startDate right=job.startDate}}
+{{comparison-row title="Start Date" left=prospect.startDate right=job.startDate}}
 <!-- company size -->
-{{comparison-line title="Company Size" left=prospect.companySize right=job.companySize}}
+{{comparison-row title="Company Size" left=prospect.companySize right=job.companySize}}
 <!-- team size -->
-{{comparison-line title="Team Size" 
+{{comparison-row title="Team Size" 
   left=(concat prospect.teamSize.min "-" prospect.teamSize.max) 
   right=(concat job.teamSize.min "-" job.teamSize.max)
   }}

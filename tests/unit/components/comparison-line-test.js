@@ -3,7 +3,7 @@ import { describe, it } from 'mocha';
 import { setupComponentTest } from 'ember-mocha';
 
 describe('Unit | Component | comparison line', function () {
-  setupComponentTest('comparison-line', {
+  setupComponentTest('comparison-row', {
     // Specify the other units that are required for this test
     // needs: ['component:foo', 'helper:bar'],
     unit: true

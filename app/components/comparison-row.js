@@ -24,7 +24,7 @@ export default Component.extend({
    * Components class names
    * @var []
    */
-  classNames: ['comparison-line'],
+  classNames: ['comparison-row'],
   classNameBindings: ['classTitle'],
 
   /******************************** Computed */
