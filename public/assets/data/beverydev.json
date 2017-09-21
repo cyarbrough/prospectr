@@ -3,10 +3,10 @@
     "type": "prospect",
     "id": "2",
     "attributes": {
-      "name": "C. Yarbrough",
-      "avatar": "/images/avatars/avatar-cy.png",
-      "headline": "Front-end Developer & Designer",
-      "match-percent": 96
+      "name": "Billy Everydev",
+      "avatar": "assets/images/avatars/avatar-bro.png",
+      "headline": "Front-end Brogrammer",
+      "match-percent": 37
     },
     "relationships": {
       "essentials": {
@@ -39,38 +39,38 @@
     "type": "essentials",
     "id": "2",
     "attributes": {
-      "locations": "Denver, CO",
-      "employment": ["Permanent", "Project"],
-      "experience": ["Seasoned"],
-      "start-date": "2017-09-19",
+      "locations": "San Francisco, CA",
+      "employment": ["Temporary"],
+      "experience": ["Graybeard"],
+      "start-date": "2019-01-01",
       "company-size": "Ten To Twenty",
-      "team-size": { "min": 1, "max": 6 }
+      "team-size": { "min": 1, "max": 2 }
     }
   },
   {
     "type": "methodology",
     "id": "2",
     "attributes": {
-      "code-reviews": true,
+      "code-reviews": false,
       "prototyping": true,
-      "fail-fast": true,
-      "unit-tests": true,
-      "integration-tests": true,
-      "build-server": ["Travis", "Jenkins"],
-      "static-code-analysis": ["ESLint"],
-      "version-control": ["Git", "BitBucket"],
-      "issue-tracker": ["GitHub", "Jira"],
-      "stand-ups": true,
-      "quick-start": true,
-      "commit-on-day-one": true
+      "fail-fast": false,
+      "unit-tests": false,
+      "integration-tests": false,
+      "build-server": ["Not Yet Chosen"],
+      "static-code-analysis": ["Not Yet Chosen"],
+      "version-control": ["Not Yet Chosen"],
+      "issue-tracker": ["Not Yet Chosen"],
+      "stand-ups": false,
+      "quick-start": false,
+      "commit-on-day-one": false
     }
   },
   {
     "type": "specification",
     "id": "2",
     "attributes": {
-      "workload": "1.0",
-      "work-week": 40,
+      "workload": "0.8",
+      "work-week": 30,
       "schedule": "Flexible",
       "remote": "Required",
       "pto": "Unlimited"
@@ -80,11 +80,11 @@
     "type": "profile",
     "id": "2",
     "attributes": {
-      "new-features": 50,
-      "client-support": 8,
-      "documentation": 15,
-      "maintenance": 25,
-      "meetings": 2
+      "new-features": 90,
+      "client-support": 2,
+      "documentation": 2,
+      "maintenance": 5,
+      "meetings": 1
     }
   },
   {
@@ -100,31 +100,31 @@
     "id": "2",
     "attributes": {
       "skills": {
-        "css3": "Expert",
-        "html5": "Expert",
-        "javascript": "Good",
-        "node": "Good",
-        "rest": "Good",
+        "css3": "Familiar",
+        "html5": "Familiar",
+        "javascript": "None",
+        "node": "None",
+        "rest": "None",
         "uiux": "Good",
         "design": "Good",
         "testing": {
           "oneof": {
             "junit": "None",
-            "qunit": "Good",
-            "mocha": "Expert",
-            "jasmine": "Familiar",
-            "selenium": "Familiar"
+            "qunit": "None",
+            "mocha": "None",
+            "jasmine": "None",
+            "selenium": "None"
           }
         },
         "framework": {
           "oneof": {
-            "ember": "Expert",
+            "ember": "None",
             "react": "Familiar",
             "vue": "None",
             "angular": "Familiar"
           }
         },
-        "boardgames": "Good"
+        "boardgames": "None"
       }
     }
   }]

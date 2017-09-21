@@ -41,7 +41,7 @@ export default Route.extend({
       dataName = params.name;
     }
 
-    return this.get('ajax').request('data/' + dataName + '.json').
+    return this.get('ajax').request('assets/data/' + dataName + '.json').
       then((prospectData) => { return this.handleProspectSuccess(prospectData); }).
       catch(() => { return this.handleProspectError(); });
   },

@@ -4,7 +4,7 @@
     "id": "1",
     "attributes": {
       "company-name": "Gridium",
-      "avatar": "/images/avatars/avatar-gridium.png",
+      "avatar": "assets/images/avatars/avatar-gridium.png",
       "headline": "Front-end Developer"
     },
     "relationships": {

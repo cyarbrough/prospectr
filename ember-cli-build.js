@@ -7,7 +7,11 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app'),
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     'ember-font-awesome': {
-      useScss: true
+      useScss: true,
+      includeFontAwesomeAssets: false
+    },
+    fingerprint: {
+      exclude: ['images/avatars']
     }
   });
 

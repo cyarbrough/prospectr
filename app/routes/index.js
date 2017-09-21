@@ -24,6 +24,6 @@ export default Route.extend({
    * Main model data for App
    */
   model() {
-    return this.get('ajax').request('data/job.json').then((jobData) => { return this.handleJobSuccess(jobData); });
+    return this.get('ajax').request('assets/data/job.json').then((jobData) => { return this.handleJobSuccess(jobData); });
   }
 });
