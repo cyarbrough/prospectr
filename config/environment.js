@@ -4,7 +4,7 @@
 /* eslint-disable complexity */
 module.exports = function (environment) {
   let ENV = {
-    modulePrefix: 'gridium-front-end',
+    modulePrefix: 'prospectr',
     environment,
     rootURL: '/',
     locationType: 'auto',
