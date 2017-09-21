@@ -6,7 +6,7 @@
     {{card-info name=model.name headline=model.headline avatar=model.avatar}}
   {{/if}}
   <!--Match Rating -->
-  {{match-rating matchPercent=90}}
+  {{match-rating matchPercent=model.matchPercent}}
   <!-- Employer Card -->
   {{card-info name=job.companyName headline=job.headline avatar=job.avatar isEmployer=true}}
 </div>
@@ -26,3 +26,6 @@
 
 <!-- outlet -->
 {{outlet}}
+
+<!-- Footer -->
+{{footer-element matchPercent=model.matchPercent}}

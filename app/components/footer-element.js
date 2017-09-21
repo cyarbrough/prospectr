@@ -14,22 +14,14 @@ export default Component.extend({
    * Components class names
    * @var {[]}
    */
-  classNames: ['match-rating'],
-  classNameBindings: ['isLow', 'isMid', 'isHigh'],
-
-  /******************************** Computed */
+  classNames: ['footer-element'],
+  classNameBindings: ['isHigh', 'isLow', 'isMid'],
   /**
-   * Components class names
-   * @var {[]}
+   * Replaces the default tag name
+   * @var {string}
    */
-  iconName: computed('matchPercent', function () {
-    if (this.get('isHigh')) {
-      return 'heart';
-    } else if (this.get('isMid')) {
-      return 'check-circle';
-    }
-    return 'exclamation-triangle';
-  }),
+  tagName: 'footer',
+  /******************************** Computed */
   /**
    * Indicates if the match rating is high
    * @var {boolean}

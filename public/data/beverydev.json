@@ -4,8 +4,9 @@
     "id": "2",
     "attributes": {
       "name": "Billy Everydev",
-      "avatar": "/images/avatars/avatar-cy.png",
-      "headline": "Front-end Brogrammer"
+      "avatar": "/images/avatars/avatar-bro.png",
+      "headline": "Front-end Brogrammer",
+      "match-percent": 37
     },
     "relationships": {
       "essentials": {
@@ -68,8 +69,8 @@
     "type": "specification",
     "id": "2",
     "attributes": {
-      "workload": "1.0",
-      "work-week": 40,
+      "workload": "0.8",
+      "work-week": 30,
       "schedule": "Flexible",
       "remote": "Required",
       "pto": "Unlimited"

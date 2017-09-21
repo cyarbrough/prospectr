@@ -5,7 +5,8 @@
     "attributes": {
       "name": "C. Yarbrough",
       "avatar": "/images/avatars/avatar-cy.png",
-      "headline": "Front-end Developer & Designer"
+      "headline": "Front-end Developer & Designer",
+      "match-percent": 96
     },
     "relationships": {
       "essentials": {

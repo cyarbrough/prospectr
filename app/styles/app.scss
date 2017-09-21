@@ -1,9 +1,11 @@
 @import '_base/variables';
 @import '../../../node_modules/font-awesome/scss/font-awesome';
-@import '_base/structure';
+@import '_base/animations';
 @import '_base/general';
+@import '_base/structure';
 @import 'components/card-info';
 @import 'components/cards';
 @import 'components/comparison-row';
+@import 'components/footer-element';
 @import 'components/match-rating';
 

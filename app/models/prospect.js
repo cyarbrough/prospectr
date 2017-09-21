@@ -6,6 +6,9 @@ export default Model.extend({
   avatar: attr('string'),
   name: attr('string'),
   headline: attr('string'),
+  matchPercent: attr('number', {
+    defaultValue: 0
+  }),
   other: attr(),
 
   /******************************** Relationships */

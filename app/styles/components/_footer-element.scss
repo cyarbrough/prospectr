@@ -1,0 +1,111 @@
+/**
+  * Styles for footer-element component
+  */
+
+.footer-element {
+  margin: 5em 0 1em;
+  position: relative;
+  text-align: center;
+
+  > .button {
+    background: #DDD;
+    border: 1px solid $color-border-default;
+    border-radius: 3px;
+    box-shadow: $shadow-level-1;
+    color: $color-font-default;
+    display: inline-block;
+    font-size: 20px;
+    min-width: 150px;
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all $transition-duration-fast $transition-ease;
+
+    > .match-rating {
+      display: inline-block;
+      font-size: 16px;
+
+      &.is-low,
+      &.is-mid,
+      &.is-high {
+        color: $color-font-default;
+        transition: all $transition-duration-fast $transition-ease;
+      }
+
+      .fa {
+        margin: 0 5px 0 0;
+
+        &::after {
+          content: none;
+        }
+      }
+
+      &::after {
+        content: none;
+      }
+    }
+
+    &:hover {
+      box-shadow: $shadow-level-2;
+      color: $color-card-background-default;
+
+      > .match-rating {
+        display: inline-block;
+        font-size: 16px;
+
+        &.is-low,
+        &.is-mid,
+        &.is-high {
+          color: $color-card-background-default;
+        }
+      }
+    }
+  }
+
+  &::after {
+    border-right: 1px dashed $color-border-default;
+    bottom: 75%;
+    content: '';
+    left: 50%;
+    position: absolute;
+    top: -5em;
+    z-index: -2;
+  }
+
+  &.is-low {
+    > .button {
+      &:hover {
+        background-color: $color-low;
+        border: 1px solid $color-low;
+      }
+    }
+  }
+
+  &.is-mid {
+    > .button {
+      &:hover {
+        background-color: $color-mid;
+        border: 1px solid $color-mid;
+      }
+    }
+  }
+
+  &.is-high {
+    > .button {
+      &:hover {
+        background-color: $color-high;
+        border: 1px solid $color-high;
+      }
+    }
+  }
+
+  .note {
+    color: $color-font-default-faded;
+    font-size: 12px;
+    font-style: italic;
+    margin: 5em 0 0;
+    text-align: center;
+    text-transform: lowercase;
+  }
+}

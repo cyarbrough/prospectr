@@ -1,0 +1,28 @@
+/**
+  * Animation Rules
+  */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9, 0.9);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+.zoomIn {
+  animation-duration: $transition-duration-fast;
+  animation-name: zoomOut;
+  animation-timing-function: $transition-ease;
+  transform: scale(1, 1);
+
+  &:hover {
+    animation-duration: $transition-duration-fast;
+    animation-name: zoomIn;
+    animation-timing-function: $transition-ease;
+    transform: scale(1.5, 1.5);
+  }
+}
