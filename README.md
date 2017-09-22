@@ -1,6 +1,9 @@
 # prospectr
 
-Demo app that compares a job listing to potential hires. See it live at: [cy-prospectr.herokuapp.com](https://cy-prospectr.herokuapp.com/). See the original draft on [Twitter](https://twitter.com/emazo/status/911031996180082688)
+Demo app that compares a job listing to potential hires. 
+
+See it live at: [cy-prospectr.herokuapp.com](https://cy-prospectr.herokuapp.com/).
+See the original draft on [Twitter](https://twitter.com/emazo/status/911031996180082688)
 
 ## Features
 
