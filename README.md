@@ -1,7 +1,25 @@
 # prospectr
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Demo app that compares a job listing to potential hires. See it live at: [cy-prospectr.herokuapp.com](https://cy-prospectr.herokuapp.com/). See the original draft on [Twitter](https://twitter.com/emazo/status/911031996180082688)
+
+## Features
+
+* Fetches job listing & prospect data from JSONAPI structured json file
+* Processes model data into local models
+* Loads data into discreet components
+* Compares data to determine equality
+* Palette based, minimal design
+* Dynamic charts
+* Mobile responsive
+* 100% unit test coverage
+
+
+## Potential Expansion
+* Better match detecting
+* Dynamic match rating
+* Integrations tests, Acceptance tests
+* Edit as User, Edit as Employer
+
 
 ## Prerequisites
 
@@ -14,23 +32,24 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/cyarbrough/prospectr`
 * `cd prospectr`
-* `npm install`
+* `npm run install-app`
 
 ## Running / Development
 
 * `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
+* Visit prospectr at [http://localhost:4200](http://localhost:4200).
 
 ### Running Tests
 
 * `ember test`
 * `ember test --server`
+
+### Running Test Coverage
+
+* `npm run coverage`
+* Coverage reports have been provided in this repo; see coverage/index.html
 
 ### Building
 
@@ -39,7 +58,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+* `npm run deploy-prod`
 
 ## Further Reading / Useful Links
 

@@ -1,7 +1,7 @@
 {
   "name": "prospectr",
-  "version": "0.0.0",
-  "description": "Compare prospects with your job specs",
+  "version": "1.0.0",
+  "description": "Compare prospects to your job specs",
   "license": "MIT",
   "author": "C. Yarbrough <cryarbrough@gmail.com>",
   "directories": {
