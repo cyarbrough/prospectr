@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for app/components/card-info.js</title>
+    <title>Code coverage report for app/components/footer-element.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">all files</a> / <a href="index.html">app/components/</a> card-info.js
+      <a href="../../index.html">all files</a> / <a href="index.html">app/components/</a> footer-element.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>7/7</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
-        <span class="quiet">Branches</span>
         <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
-        <span class="quiet">Functions</span>
+        <span class="quiet">Branches</span>
         <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>7/7</span>
+        <span class='fraction'>4/4</span>
       </div>
     </div>
   </div>
@@ -85,8 +85,17 @@
 40
 41
 42
-43</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+43
+44
+45
+46
+47
+48</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -111,9 +120,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -121,9 +127,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -133,39 +143,44 @@ const { Component, computed } = Ember;
 export default Component.extend({
   /******************************** Passed-In Variables */
   /**
-   * Indicates if the info card is an employer-style card
-   * @var {boolean}
+   * Match rating percent
+   * @var {number}
    */
-  isEmployer: false,
+  matchPercent: 0,
 &nbsp;
   /******************************** Variables */
   /**
    * Components class names
    * @var {[]}
    */
-  classNames: ['card', 'card-info'],
-  classNameBindings: ['isEmployer'],
-&nbsp;
-  /******************************** Computed */
+  classNames: ['footer-element'],
+  classNameBindings: ['isHigh', 'isLow', 'isMid'],
   /**
-   * Returns icon name based on isEmployer
+   * Replaces the default tag name
    * @var {string}
    */
-  cardIcon: computed('isEmployer', function () {
-    if (this.get('isEmployer')) {
-      return 'building-o';
-    }
-    return 'child';
+  tagName: 'footer',
+  /******************************** Computed */
+  /**
+   * Indicates if the match rating is high
+   * @var {boolean}
+   */
+  isHigh: computed('matchPercent', function () {
+    return this.get('matchPercent') &gt;= 75;
   }),
   /**
-   * Returns filler value for sub-headline
-   * @var []
+   * Indicates if the match rating is low
+   * @var {boolean}
    */
-  subHeadline: computed('isEmployer', function () {
-    if (this.get('isEmployer')) {
-      return 'offering';
-    }
-    return 'seeking';
+  isLow: computed('matchPercent', function () {
+    return this.get('matchPercent') &lt; 50;
+  }),
+  /**
+   * Indicates if the match rating is mid
+   * @var {boolean}
+   */
+  isMid: computed('matchPercent', function () {
+    return this.get('matchPercent') &gt;= 50 &amp;&amp; this.get('matchPercent') &lt; 75;
   })
 });
 &nbsp;

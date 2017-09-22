@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for app/components/card-info.js</title>
+    <title>Code coverage report for app/components/profile-chart-item.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">all files</a> / <a href="index.html">app/components/</a> card-info.js
+      <a href="../../index.html">all files</a> / <a href="index.html">app/components/</a> profile-chart-item.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -27,12 +27,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -85,7 +85,20 @@
 40
 41
 42
-43</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -110,62 +123,88 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Ember from 'ember';
-const { Component, computed } = Ember;
+const { Component, computed, observer } = Ember;
 &nbsp;
 export default Component.extend({
   /******************************** Passed-In Variables */
   /**
-   * Indicates if the info card is an employer-style card
-   * @var {boolean}
+   * Match rating percent
+   * @var {number}
    */
-  isEmployer: false,
+  percent: 0,
+  /**
+   * Match rating percent
+   * @var {string}
+   */
+  title: null,
 &nbsp;
   /******************************** Variables */
   /**
    * Components class names
    * @var {[]}
    */
-  classNames: ['card', 'card-info'],
-  classNameBindings: ['isEmployer'],
+  classNames: ['item'],
 &nbsp;
   /******************************** Computed */
   /**
-   * Returns icon name based on isEmployer
+   * Tooltip for element
    * @var {string}
    */
-  cardIcon: computed('isEmployer', function () {
-    if (this.get('isEmployer')) {
-      return 'building-o';
-    }
-    return 'child';
+  tooltip: computed('percent', 'title', function () {
+    return this.get('percent') + '% ' + this.get('title');
   }),
+&nbsp;
+  /******************************** Functions */
   /**
-   * Returns filler value for sub-headline
-   * @var []
+   * Called after element is rendered
    */
-  subHeadline: computed('isEmployer', function () {
-    if (this.get('isEmployer')) {
-      return 'offering';
+  didRender() {
+    this.percentObserver();
+  },
+&nbsp;
+  /******************************** Observers */
+  /**
+   * Called after percent is changed; changes width of associated element
+   */
+  percentObserver: observer('percent', function () {
+    let percent = this.get('percent') - 1;
+&nbsp;
+    if (percent &lt; 1) {
+      percent = 1;
     }
-    return 'seeking';
+&nbsp;
+    this.set('percentWidth', percent + '%');
   })
 });
 &nbsp;

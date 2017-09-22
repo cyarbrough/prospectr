@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for app/components/card-info.js</title>
+    <title>Code coverage report for app/components/comparison-row-chart.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">all files</a> / <a href="index.html">app/components/</a> card-info.js
+      <a href="../../index.html">all files</a> / <a href="index.html">app/components/</a> comparison-row-chart.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>7/7</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>7/7</span>
+        <span class='fraction'>5/5</span>
       </div>
     </div>
   </div>
@@ -85,7 +85,15 @@
 40
 41
 42
-43</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+43
+44
+45
+46
+47
+48
+49
+50
+51</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -110,20 +118,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">42×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4×</span>
-<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">42×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">42×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">42×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -133,39 +149,47 @@ const { Component, computed } = Ember;
 export default Component.extend({
   /******************************** Passed-In Variables */
   /**
-   * Indicates if the info card is an employer-style card
-   * @var {boolean}
+   * Data to display
+   * @var {string}
    */
-  isEmployer: false,
+  data: 'None',
 &nbsp;
   /******************************** Variables */
   /**
    * Components class names
-   * @var {[]}
+   * @var []
    */
-  classNames: ['card', 'card-info'],
-  classNameBindings: ['isEmployer'],
+  classNames: ['chart'],
+  classNameBindings: ['isNone', 'isFamiliar', 'isGood', 'isExpert'],
 &nbsp;
   /******************************** Computed */
   /**
-   * Returns icon name based on isEmployer
-   * @var {string}
+   * Indicates if data equals None
+   * @var {boolean}
    */
-  cardIcon: computed('isEmployer', function () {
-    if (this.get('isEmployer')) {
-      return 'building-o';
-    }
-    return 'child';
+  isNone: computed('data', function () {
+    return this.get('data') === 'None';
   }),
   /**
-   * Returns filler value for sub-headline
-   * @var []
+   * Indicates if data equals Familiar
+   * @var {boolean}
    */
-  subHeadline: computed('isEmployer', function () {
-    if (this.get('isEmployer')) {
-      return 'offering';
-    }
-    return 'seeking';
+  isFamiliar: computed('data', function () {
+    return this.get('data') === 'Familiar';
+  }),
+  /**
+   * Indicates if data equals Good
+   * @var {boolean}
+   */
+  isGood: computed('data', function () {
+    return this.get('data') === 'Good';
+  }),
+  /**
+   * Indicates if data equals Expect
+   * @var {boolean}
+   */
+  isExpert: computed('data', function () {
+    return this.get('data') === 'Expert';
   })
 });
 &nbsp;

@@ -30,13 +30,15 @@ describe('Unit | Component | comparison row', function () {
 
       expect(result1).to.not.be.equal(result2);
     });
-    it('returns default from classType', function () {
-      let component = this.subject(),
+    it('returns null from classType', function () {
+      let component = this.subject({
+          displayType: null
+        }),
         result;
 
       result = component.get('classType');
 
-      expect(result).to.be.ok;
+      expect(result).to.be.null;
     });
     it('returns different data from classTitle based on title', function () {
       let component = this.subject(),
@@ -85,6 +87,39 @@ describe('Unit | Component | comparison row', function () {
       result = component.get('displayComponent');
 
       expect(result).to.be.equal('comparison-row-string');
+    });
+    it('returns true from isEqual', function (){
+      let component = this.subject({
+          left: 1,
+          right: 1
+        }),
+        result;
+
+      result = component.get('isEqual');
+
+      expect(result).to.be.true;
+    });
+    it('returns false from isEqual', function (){
+      let component = this.subject({
+          left: 1,
+          right: 2
+        }),
+        result;
+
+      result = component.get('isEqual');
+
+      expect(result).to.be.false;
+    });
+    it('returns false from isEqual with values', function (){
+      let component = this.subject({
+          left: { value: 1 },
+          right: { value: 1 }
+        }),
+        result;
+
+      result = component.get('isEqual');
+
+      expect(result).to.be.true;
     });
   });
 });
