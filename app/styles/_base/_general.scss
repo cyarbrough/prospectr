@@ -11,6 +11,8 @@ body {
 }
 
 .app-title {
+  background: $color-background-default;
+  padding-bottom: 3px;
   text-align: center;
   text-transform: lowercase;
 }

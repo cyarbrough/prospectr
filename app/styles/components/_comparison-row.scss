@@ -14,6 +14,10 @@
   margin: 0 0 5px;
   transition: all $transition-duration-fast $transition-ease;
 
+  @include media('<tablet') {
+    font-size: $font-size - 3;
+  }
+
   > .left,
   > .title,
   > .right {

@@ -55,6 +55,7 @@
     "ember-tether": "^1.0.0-beta.0",
     "ember-tooltips": "^2.9.0",
     "font-awesome": "^4.7.0",
+    "include-media": "^1.4.9",
     "loader.js": "^4.2.3",
     "normalize.css": "^7.0.0",
     "stylelint-config-standard": "^17.0.0",

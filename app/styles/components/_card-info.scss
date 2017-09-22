@@ -68,6 +68,11 @@
     margin: 0;
     padding: 0;
 
+    @include media('<tablet') {
+      font-size: 14px;
+      margin-bottom: 23px;
+    }
+
     > .sub-headline {
       color: $color-font-default-faded;
       display: block;
@@ -85,11 +90,28 @@
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
+
+    @include media('<tablet') {
+      bottom: 5px;
+      right: 50%;
+      top: auto;
+      transform: translateX(50%);
+    }
   }
 
   &.is-employer {
     background: $color-card-background-job;
     text-align: right;
+
+    @include media('<tablet') {
+      padding-top: 28px;
+    }
+
+    &::after {
+      @include media('<tablet') {
+        top: -7em;
+      }
+    }
 
     > .avatar {
       float: right;
@@ -116,9 +138,23 @@
       }
     }
 
+    > .headline {
+      @include media('<tablet') {
+        margin-bottom: 0;
+      }
+    }
+
     > .flair {
       left: 10px;
       right: auto;
+
+      @include media('<tablet') {
+        bottom: auto;
+        left: auto;
+        right: 50%;
+        top: 5px;
+        transform: translateX(50%);
+      }
     }
   }
 }

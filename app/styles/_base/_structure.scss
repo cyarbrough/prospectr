@@ -9,6 +9,10 @@
 .container {
   margin: 0 auto;
   max-width: 1024px;
+
+  @include media('<tablet') {
+    width: 96%;
+  }
 }
 
 .info-cards {
@@ -25,8 +29,31 @@
   > .match-rating {
     flex-grow: 5;
   }
+
+  @include media('<tablet') {
+    flex-direction: column;
+    min-height: 325px;
+
+    > .card-info {
+      flex-grow: unset;
+      width: 95%;
+    }
+
+    > .match-rating {
+      > .fa {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
 }
 
 .card {
   width: 75%;
+
+  @include media('<tablet') {
+    width: 95%;
+  }
 }
